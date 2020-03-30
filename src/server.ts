@@ -41,7 +41,7 @@ res.status(200).send("Hello!")
   app.get("/filteredimage", async (req, res) => {
 
     //1. validate the image_url query
-    var image_url = req.query.image_url;
+    const image_url = req.query.image_url;
     //2. call filterImageFromURL(image_url) to filter the image
     filterImageFromURL(image_url).then(filteredpath => {
     //3. send the resulting file in the response
