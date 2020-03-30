@@ -51,7 +51,7 @@ res.status(200).send("Hello!")
       })
     })
       .catch(error => {
-        res.send(JSON.stringify(error))
+        res.status(422).send(JSON.stringify(error))
 
       })
   });
